@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Astrology</title>
+</head>
+<body style="background-color:black;">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+
+p {
+    display: block;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+h1 {
+    display: block;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+</style>
+
+<div class="container-fluid">
+
+
+<br>
+<h1 style="border:2px solid Violet;text-align:center;color:violet;font-size:300%;
+font-family:'Times New Roman', Times, serif"><i>The Zodiacs</i></h1>
+<br>
+
+<!-- "Note: The map for my image works, but the buttons are only in the correct spots when the window is 
+minimized, not full screen. You can still find the buttons if its full screen, but they're in the wrong 
+spots. I couldn't make the buttons move with the window size in time to turn my code in, but I did know 
+I wanted to try to create a function that would multiply the coordinates based on image size." -->
+
+<map name="astrocircle">
+    <area shape="circle" coords="290,100,30" alt="aries" href="https://www.google.com/search?q=aries&oq=aries&aqs=chrome.0.69i59j0i433i512l2j0i131i433i512j0i433i512j0i512l4j0i433i512.960j0j7&sourceid=chrome&ie=UTF-8">
+    <area shape="circle" coords="360,140,30" alt="taurus" href="https://www.google.com/search?q=taurus&oq=taurus&aqs=chrome..69i57j0i433i512l7j0i131i433i512j0i433i512.2608j0j9&sourceid=chrome&ie=UTF-8">
+    <area shape="circle" coords="420,180,30" alt="gemini" href="https://www.google.com/search?q=gemini&ei=8NUoYefTHvW0qtsP1q2w2AU&oq=gemini&gs_lcp=Cgdnd3Mtd2l6EAMyBwgAELEDEEMyBwgAELEDEEMyBAgAEEMyBwgAELEDEEMyBAgAEEMyBwgAELEDEEMyBAgAEEMyBwgAELEDEEMyBwgAELEDEEMyBAgAEEM6CAgAEOoCEI8BOggILhDqAhCPAToQCC4QsQMQgwEQxwEQ0QMQQzoICAAQgAQQsQM6CwguEIAEEMcBEKMCOgUIABCABEoECEEYAFCujSBYhJggYJ2aIGgBcAJ4AIABWYgBsAOSAQE2mAEAoAEBsAEKwAEB&sclient=gws-wiz&ved=0ahUKEwjni9TTldHyAhV1mmoFHdYWDFsQ4dUDCA8&uact=5">
+    <area shape="circle" coords="440,260,30" alt="cancer" href="https://www.google.com/search?q=cancer+zodiac&ei=tNgoYY6hK4qRwbkPra-P0Ag&oq=cancer+zodiac&gs_lcp=Cgdnd3Mtd2l6EAMyBwgAELEDEEMyCAgAEIAEELEDMggIABCABBCxAzIICAAQgAQQsQMyCAgAEIAEELEDMgUIABCABDIICAAQgAQQsQMyCAgAEIAEELEDMgUIABCABDIFCAAQgAQ6BwgAEEcQsAM6BwgAELADEEM6BAgAEENKBAhBGABQjilY5F9gl2JoAnACeACAAWuIAawEkgEDNS4ymAEAoAEByAEKwAEB&sclient=gws-wiz&ved=0ahUKEwiOy62lmNHyAhWKSDABHa3XA4oQ4dUDCA8&uact=5">
+    <area shape="circle" coords="420,340,30" alt="leo" href="https://www.google.com/search?q=leo&ei=wtgoYYeoDOKqwbkPl7KpqAY&oq=leo&gs_lcp=Cgdnd3Mtd2l6EAMyBwgAELEDEEMyBwgAELEDEEMyBAgAEEMyBwgAELEDEEMyBAgAEEMyBwgAELEDEEMyBwgAELEDEEMyBAgAEEMyCAgAEIAEELEDMgQIABBDOggIABDqAhCPAToICC4Q6gIQjwE6DgguEIAEELEDEMcBEKMCOgUIABCABDoLCC4QgAQQxwEQrwE6CAgAELEDEIMBSgQIQRgAUMDhB1iv9gdgn_kHaAJwAngAgAF-iAGJA5IBAzIuMpgBAKABAbABCsABAQ&sclient=gws-wiz&ved=0ahUKEwiHkeWrmNHyAhViVTABHRdZCmUQ4dUDCA8&uact=5">
+    <area shape="circle" coords="360,390,30" alt="virgo" href="https://www.google.com/search?q=virgo&ei=RdkoYdfoEIuawbkPqKGL6AI&oq=virgo&gs_lcp=Cgdnd3Mtd2l6EAMyBwgAELEDEEMyCggAELEDEIMBEEMyCggAELEDEIMBEEMyBAgAEEMyCwgAEIAEELEDEIMBMgcIABCxAxBDMgcIABCxAxBDMgQIABBDMggIABCABBCxAzIECAAQQzoICAAQ6gIQjwE6CAguEOoCEI8BOg4ILhCABBCxAxDHARDRAzoOCC4QgAQQsQMQxwEQowI6CwguEIAEEMcBENEDOgsILhCABBDHARCjAjoICC4QgAQQsQNKBAhBGABQrf8EWLSEBWDUhgVoAXACeACAAVCIAcsCkgEBNZgBAKABAbABCsABAQ&sclient=gws-wiz&ved=0ahUKEwiXn6XqmNHyAhULTTABHajQAi0Q4dUDCA8&uact=5">
+    <area shape="circle" coords="290,420,30" alt="libra" href="https://www.google.com/search?q=libra&ei=_tkoYd3qBZ2wqtsPkrKi0AU&oq=libra&gs_lcp=Cgdnd3Mtd2l6EAMyCwgAEIAEELEDEMkDMgUIABCSAzIICAAQgAQQsQMyBQgAEIAEMggIABCABBCxAzIICAAQgAQQsQMyCggAELEDEIMBEEMyBQgAEIAEMgUIABCABDIICAAQgAQQsQM6BwgAEEcQsAM6CAgAEJIDELADOhAILhDHARDRAxDIAxCwAxBDOhAILhDHARCjAhDIAxCwAxBDOhAILhDHARCvARDIAxCwAxBDOgsILhCABBDHARCvAToLCAAQgAQQsQMQgwFKBQg4EgExSgQIQRgAUJYRWL0SYJUUaAFwAngAgAFPiAGMAZIBATKYAQCgAQHIAQ_AAQE&sclient=gws-wiz&ved=0ahUKEwjd4bXCmdHyAhUdmGoFHRKZCFoQ4dUDCA8&uact=5">
+    <area shape="circle" coords="220,400,30" alt="scorpio" href="https://www.google.com/search?q=scorpio&ei=AtooYZqIDomHwbkP4Pay6AU&oq=scorpio&gs_lcp=Cgdnd3Mtd2l6EAMyBwgAELEDEEMyBwgAELEDEEMyBwgAELEDEEMyBwgAELEDEEMyBwgAELEDEEMyBAgAEEMyBwgAELEDEEMyCggAELEDEIMBEEMyBwgAELEDEEMyBAgAEEM6CAgAEOoCEI8BOggILhDqAhCPAToOCC4QgAQQsQMQxwEQowI6CAgAEIAEELEDOgsILhCABBDHARCjAjoOCC4QgAQQsQMQxwEQ0QNKBAhBGABQuoMIWI-RCGD_kwhoAXACeACAAWuIAfwDkgEDNi4xmAEAoAEBsAEKwAEB&sclient=gws-wiz&ved=0ahUKEwiakbLEmdHyAhWJQzABHWC7DF0Q4dUDCA8&uact=5">
+    <area shape="circle" coords="160,340,30" alt="sagittarius" href="https://www.google.com/search?q=sagittarius&ei=5MMsYdLwI5CUwbkP0faP4Ao&oq=sag&gs_lcp=Cgdnd3Mtd2l6EAEYADIHCAAQsQMQQzIHCAAQsQMQQzIHCAAQsQMQQzIECAAQQzIHCAAQsQMQQzIECAAQQzIHCAAQsQMQQzIECAAQQzIHCAAQsQMQQzIECAAQQzoICAAQ6gIQjwE6CAguEOoCEI8BOgcIABCABBAKSgQIQRgAULeKElj-mRJg1acSaAJwAngAgAF8iAH4ApIBAzMuMZgBAKABAbABCsABAQ&sclient=gws-wiz">
+    <area shape="circle" coords="145,260,30" alt="capricorn" href="https://www.google.com/search?q=capricorn&ei=EcUsYaLbIK-bwbkPoLurmAE&oq=capricorn&gs_lcp=Cgdnd3Mtd2l6EAMyBwgAELEDEEMyBwgAELEDEEMyBwgAELEDEEMyBAgAEEMyBwgAELEDEEMyBwgAELEDEEMyBAgAEEMyBAgAEEMyBwgAELEDEEMyCwgAEIAEELEDEIMBOggIABDqAhCPAToICC4Q6gIQjwE6EQguEIAEELEDEIMBEMcBENEDOggIABCABBCxAzoFCAAQgAQ6DgguELEDEMcBEKMCEJMCOgsILhCABBDHARCvAToHCAAQgAQQCjoFCC4QgAQ6CggAELEDEIMBEApKBAhBGABQ998HWK2ECGDAhwhoA3ACeACAAc4BiAHuBpIBBjEwLjAuMZgBAKABAbABCsABAQ&sclient=gws-wiz&ved=0ahUKEwjip5uQ1tjyAhWvTTABHaDdChMQ4dUDCA8&uact=5">
+    <area shape="circle" coords="150,190,30" alt="aquarius" href="https://www.google.com/search?q=aquarius&ei=lsUsYaLMFriQwbkPy5uN6Ak&oq=aqua&gs_lcp=Cgdnd3Mtd2l6EAEYADIHCAAQsQMQQzIHCAAQsQMQQzIHCAAQsQMQQzIHCAAQsQMQQzIHCAAQsQMQQzIECAAQQzIECAAQQzIHCAAQsQMQQzIECAAQQzIKCAAQsQMQgwEQQzoICAAQ6gIQjwE6CAguEOoCEI8BOhEILhCABBCxAxCDARDHARDRAzoICAAQgAQQsQM6CwguEIAEEMcBENEDOg4ILhCABBCxAxDHARCjAjoFCAAQsQM6CwguEIAEEMcBEKMCSgQIQRgAUKi5C1i_vgtgpcoLaAFwAngAgAFhiAHIApIBATSYAQCgAQGwAQrAAQE&sclient=gws-wiz">
+    <area shape="circle" coords="210,130,30" alt="pisces" href="https://www.google.com/search?q=pisces&ei=VMYsYdbJO4mHwbkPyvuymAI&oq=pis&gs_lcp=Cgdnd3Mtd2l6EAEYADIHCAAQsQMQQzIHCAAQsQMQQzIECAAQQzIHCAAQsQMQQzIHCAAQsQMQQzIHCAAQsQMQQzIKCAAQsQMQgwEQQzIECAAQQzIECAAQQzIHCAAQsQMQQzoICAAQ6gIQjwE6CAguEOoCEI8BOggIABCxAxCDAToOCC4QgAQQsQMQxwEQowI6DgguEIAEELEDEMcBENEDOgsILhCABBDHARCjAjoLCAAQgAQQsQMQgwFKBAhBGABQh9UHWJbZB2Cc6gdoAXACeACAAUqIAdABkgEBM5gBAKABAbABCsABAQ&sclient=gws-wiz">
+</map>
+
+<img src="https://st3.depositphotos.com/16122460/34961/i/450/depositphotos_349613252-stock-photo-illustration-zodiac-wheel-astrological-signs.jpg"
+ alt="Astrology Circle" class="mx-auto d-block" style="width:50%" usemap="#astrocircle">
+<br>
+
+
+<p style="color:violet;font-size:300%;font-family:'Times New Roman', Times, serif;
+text-align:center;"><i><b>Capricorn</b></i></p>
+<p style="color:violet;font-size:200%;font-family:'Times New Roman', Times, serif;
+text-align:justify;">As a capricorn, you have an amazing work-ethic. You're dedicated to 
+whats assigned to you. However, this can make you seem very uptight to other people. You speak your
+mind, which is a blessing and a curse. You aren't necessarily selfish, but you put yourself first. If 
+helping others doesn't get in the way of what you're doing, then you'll hapily help. Just like an 
+earth sign, you're as stubborn as a rock.</p>
+<br>
+<br>
+<br>
+<br>
+
+<p style="color:violet;font-size:300%;font-family:'Times New Roman', Times, serif;
+text-align:center;"><i><b>Aquarius</b></i></p>
+<p style="color:violet;font-size:200%;font-family:'Times New Roman', Times, serif;
+text-align:justify;">As an aqaurius, you are very independent and you enjoy it, sometimes too much.
+You care a lot about being different and standing out. This can lead to people thinking of you as 
+selfish, but you are a nice person. You're a little bit of an odd ball, but who isn't, right?
+Like any air sign, you're a free spirit.</p>
+<br>
+<br>
+<br>
+<br>
+
+<p style="color:violet;font-size:300%;font-family:'Times New Roman', Times, serif;
+text-align:center;"><i><b>Pisces</b></i></p>
+<p style="color:violet;font-size:200%;font-family:'Times New Roman', Times, serif;
+text-align:justify;">As a pisces, you're very emotional. You attach to your emotions easily,
+this makes you very true to yourself and others. You value honesty. You're very good at handling 
+other people's emotions and helping when others are emotionally distressed. You do, however, 
+have a tedency to let your emotions take over. Overall you are a nice person. Just like a water sign, 
+your emotions tend to shift.</p>
+<br>
+<br>
+<br>
+<br>
+
+<p style="color:violet;font-size:300%;font-family:'Times New Roman', Times, serif;
+text-align:center;"><i><b>Aries</b></i></p>
+<p style="color:violet;font-size:200%;font-family:'Times New Roman', Times, serif;
+text-align:justify;">As an aries, you're a firey person. That's right, rumors are true, you've got 
+anger issues. But that's ok, your anger is fueled by your drive. You're a natural leader and tends to
+do well with communicating your thoughts. While your anger tends to slip, you know that you truly
+care for what you're talking about. Just as a fire sign is, you're passionate.</p>
+<br>
+<br>
+<br>
+<br>
+
+<p style="color:violet;font-size:300%;font-family:'Times New Roman', Times, serif;
+text-align:center;"><i><b>Taurus</b></i></p>
+<p style="color:violet;font-size:200%;font-family:'Times New Roman', Times, serif;
+text-align:justify;">As a taurus, you are a kind person. You want to be a good person, and enjoy seeing 
+others happy. However, this isn't your fuel, as you highly value your alone time. This can lead to a little 
+bit of laziness. You care for others to an extent. You expect kindness back, and when it isn't reciprocated, 
+you become a stone cold person. As an earth sign should be, you're stubborn.</p>
+<br>
+<br>
+<br>
+<br>
+
+<p style="color:violet;font-size:300%;font-family:'Times New Roman', Times, serif;
+text-align:center;"><i><b>Gemini</b></i></p>
+<p style="color:violet;font-size:200%;font-family:'Times New Roman', Times, serif;
+text-align:justify;">As a gemini, you're very intellignet and articulate. Your communication skills are 
+unmatched. You have the natural ability to eaily read people, making it very easy for you to empathize
+with others. This also makes you good at manipulation. This can be a blessing or a curse, depending on 
+the gemini in question. Just like any air sign, you're a free spirit.</p>
+<br>
+<br>
+<br>
+<br>
+
+<p style="color:violet;font-size:300%;font-family:'Times New Roman', Times, serif;
+text-align:center;"><i><b>Cancer</b></i></p>
+<p style="color:violet;font-size:200%;font-family:'Times New Roman', Times, serif;
+text-align:justify;">As a cancer, you have a kind soul. You enjoy being kind and have a soft exterior.
+However, you aren't happy-go-lucky, you have a mean side and it tends to easily slip out when you feel 
+emotional. You can go from a friendly to hostile mood in an instant. At times, you can lose track of 
+yourself and act more selfish than usual, though you don't mean to. As a water sign, your emotions 
+tend to shift.</p>
+<br>
+<br>
+<br>
+<br>
+
+<p style="color:violet;font-size:300%;font-family:'Times New Roman', Times, serif;
+text-align:center;"><i><b>Leo</b></i></p>
+<p style="color:violet;font-size:200%;font-family:'Times New Roman', Times, serif;
+text-align:justify;">As a leo, you're very selfish. While yes, many people stereotype leos, you're just 
+looking out for yourself first. Your priorities tend to be mostly centered around yourself. You have a 
+hard time being empathetic towards other people and overall struggle to pick up on others emotions.
+However, you are one of the most confident signs. You know yourself most and don't let others walk 
+all over you. Like a fire sign is, you're very passionate.</p>
+<br>
+<br>
+<br>
+<br>
+
+<p style="color:violet;font-size:300%;font-family:'Times New Roman', Times, serif;
+text-align:center;"><i><b>Virgo</b></i></p>
+<p style="color:violet;font-size:200%;font-family:'Times New Roman', Times, serif;
+text-align:justify;"> As a virgo, you enjoy organization. Even if you aren't necessarily a neat freak,
+you always tend to have an organized way of doing things. You're intelligent and a hard worker. 
+Similar to capricorn, you have a strong work ethic. However, while you aren't necessarily emotional,
+you aren't emotionally distant either. You tend to have more empathy than people give you credit for.
+Just like any earth sign, you're stubborn.</p>
+<br>
+<br>
+<br>
+<br>
+
+<p style="color:violet;font-size:300%;font-family:'Times New Roman', Times, serif;
+text-align:center;"><i><b>Libra</b></i></p>
+<p style="color:violet;font-size:200%;font-family:'Times New Roman', Times, serif;
+text-align:justify;">As a libra, you're a very chill person. You relax easily and are one of the most 
+overall stable signs. However, your relaxation can quickly turn into laziness. You struggle to start
+and stay working for long periods. You're an introvert at heart, and while you aren't necessarily shy or 
+anxious, you highly value your alone time. As an air sign, you're a free spirit. </p>
+<br>
+<br>
+<br>
+<br>
+
+<p style="color:violet;font-size:300%;font-family:'Times New Roman', Times, serif;
+text-align:center;"><i><b>Scorpio</b></i></p>
+<p style="color:violet;font-size:200%;font-family:'Times New Roman', Times, serif;
+text-align:justify;">As a scorpio, you are a big loner. This isn't to say you don't have friends, but 
+when it comes down to it, you like being alone. You have a little bit of a mean side, but you know
+that and you own it. You're a very precise person, you know what you want and you're gonna get it. 
+While you aren't the most emotionally-smart person, you're very intelligent in other areas. Just like 
+a water sign, your emotions tend to shift. </p>
+<br>
+<br>
+<br>
+<br>
+
+<p style="color:violet;font-size:300%;font-family:'Times New Roman', Times, serif;
+text-align:center;"><i><b>Sagittarius</b></i></p>
+<p style="color:violet;font-size:200%;font-family:'Times New Roman', Times, serif;
+text-align:justify;">As a sagittarius, you're very adventurous. You love to explore and are always 
+searching for something new. You're a kind person, and love to help others. However, you're also 
+independent, and don't rely on anyone. You tend to be very emotionally-dumb, and while you have a 
+lot of empathy, you have a hard time dealing with emotional people and understanding them. As a fire
+sign, you're very passionate.</p>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+</body>
+</html>
